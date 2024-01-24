@@ -133,10 +133,11 @@ a.nav-link{
 	color: var(--main-fonts-color);
 
    /* Add animation properties */
-  opacity: 0; 
+  opacity: 0; /* Initially set opacity to 0 */
   animation: fadeIn 1s ease-in-out forwards; /* Use fadeIn animation */
 
-   
+   /* You can customize the animation keyframes as needed */
+
    
 }
 
@@ -318,8 +319,8 @@ a.nav-link{
 }
 
 #contact a i.far.fa-envelope {
-  color: #007bff;
-  font-size: 50px; 
+  color: #007bff; /* Change this to your desired color */
+  font-size: 50px; /* Change this to your desired font size */
 }
 /*────────────────── 
        footer
@@ -435,7 +436,7 @@ hr {
 
 @media only screen and (max-width: 500px) {
 
-	#home, #projects, #contact{
+	#home, #about-me, #projects, #contact{
       overflow-x: hidden;
 	}
 	header{
@@ -453,8 +454,8 @@ hr {
 		position:fixed;
 		top: 0px;
 		right:0;
-		width:60%;
-		height: 100vh;
+		width:30%;
+		height: 50vh;
 		display:flex;
 		flex-direction: column;
 		align-items: center;
