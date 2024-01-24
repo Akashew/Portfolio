@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!nameAnimationCompleted) {
             introName.textContent = nameText.slice(0, charIndexName++);
             if (charIndexName <= nameText.length) {
-                setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
+                setTimeout(typeText, 100); 
             } else {
                 nameAnimationCompleted = true;
                 charIndexPosition = 0;
-                typeText(); // Continue with position typing
+                typeText(); 
             }
         } else {
             if (charIndexPosition <= positions[positionIndex].length) {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     charIndexPosition = 0;
                     positionIndex = (positionIndex + 1) % positions.length;
                     typeText();
-                }, 1000); // Wait for 1 second before switching to the next position
+                }, 1000); 
             }
         }
     }
