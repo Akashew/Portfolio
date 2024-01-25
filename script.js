@@ -3,7 +3,7 @@ $(window).on('scroll', function(){
     // Set a specific scroll position to trigger the header class
     const scrollPositionThreshold = 100;
 
-    if ($(window).scrollTop() > scrollPositionThreshold) {
+    if ($(window).scrollTop() < scrollPositionThreshold) {
         $('header').addClass('nav-show');
     } else {
         $('header').removeClass('nav-show');
