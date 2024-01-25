@@ -496,7 +496,7 @@ hr {
 		position:fixed;
 		top: 0px;
 		right:0;
-		width:30%;
+		width:30vw;
 		height: 50vh;
 		display:flex;
 		flex-direction: column;
