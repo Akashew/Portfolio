@@ -12,16 +12,18 @@ const navSlide = () => {
     const hamburger = document.querySelector(".hamburger");
     const navbar = document.querySelector(".nav-bar");
     const navLinks = document.querySelectorAll(".nav-bar li");
+    const overlay = document.querySelector(".overlay");
 
     hamburger.onclick = () => {
         navbar.classList.toggle("nav-active");
+        overlay.classList.toggle("overlay-active"); // Toggle overlay visibility
 
         // Animation links
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = "";
             } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 3}s`;
             }
         });
 
@@ -29,6 +31,7 @@ const navSlide = () => {
         hamburger.classList.toggle("toggle");
     };
 }
+
 
 // Typing animation for name and different positions
 document.addEventListener('DOMContentLoaded', function () {
@@ -68,5 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeText();
 });
+
+
+
 
 window.onload = () => navSlide();

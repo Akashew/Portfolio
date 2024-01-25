@@ -28,6 +28,18 @@ main{
        header
 ──────────────────*/
 
+/* Header Box */
+.header-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #CFB97F; /* Set your desired background color */
+  z-index: -1;
+}
+
+
 header{
 	margin: 0 auto;
 	width: 100%;
@@ -40,8 +52,17 @@ header{
 	top: 0;
 	transition: 0.3s;
 	z-index: 5;
-  
 }
+
+
+/* Apply header box styles for screen widths greater than 500px */
+@media only screen and (max-width: 500px) {
+  .header-box {
+    display: none; /* Display the header box for screens > 500px */
+  }
+}
+
+
 .nav-show{
 	opacity: 0;
 }
@@ -410,13 +431,34 @@ hr {
 @keyframes navLinkFade{
 	from{
 		opacity:0;
-		transform: translatex(50px);
+		transform: translateX(50px);
 	}
 	to{
 		opacity: 1;
-		transform:translatex(0px);
+		transform:translateX(0px);
 	}
 }
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 47%;
+  background: #CFB97F; 
+  opacity: 0; /* Initially transparent */
+  transition: opacity 0.5s ease-in-out; /* Add a transition for the opacity property */
+  z-index: -2; /* Ensure it's above other elements */
+}
+
+.overlay.overlay-active {
+  display: block;
+  border-radius: 12px;
+  opacity: 1; /* Make it fully opaque when active */
+}
+
+
 
 /*────────────────── 
     media queries
