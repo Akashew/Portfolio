@@ -10,6 +10,14 @@ $(window).on('scroll', function(){
     }
 });
 
+
+const fixedOverlayHeight = 47; // Set your desired fixed height
+
+$(window).on('scroll', function () {
+    // Always set a fixed height for the overlay
+    $('.overlay').css('height', fixedOverlayHeight + 'vh');
+});
+
 // hamburger
 const navSlide = () => {
     const hamburger = document.querySelector(".hamburger");
