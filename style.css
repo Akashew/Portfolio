@@ -233,7 +233,7 @@ a.nav-link{
 
 #about-me h3{
   padding-top: 0px;
-  font-size: 65px;
+  font-size: 60px;
   text-decoration: underline;
 }
 
@@ -255,7 +255,7 @@ a.nav-link{
 }
 #projects h3{
   padding-top: 70px;
-  font-size: 65px;
+  font-size: 60px;
   text-decoration: underline;
 }
 #projects p{
@@ -378,20 +378,13 @@ a.nav-link{
 }
 
 #contact h3{
-  font-size: 65px;
+  font-size: 60px;
   text-decoration: underline;
 }
 
 #contact a i.far.fa-envelope {
   color: var(--main-fonts-color); /* Change this to your desired color */
   font-size: 50px; /* Change this to your desired font size */
-}
-
-
-@media only screen and (max-width: 500px) {
-  #contact h3 {
-    padding: 0.5px; /* Adjust the padding to your preference */
-  }
 }
 
 
