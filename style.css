@@ -390,7 +390,7 @@ a.nav-link{
 
 @media only screen and (max-width: 500px) {
   #contact h3 {
-    padding: 0.1px; /* Adjust the padding to your preference */
+    padding: 0.5px; /* Adjust the padding to your preference */
   }
 }
 
