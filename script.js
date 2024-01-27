@@ -1,15 +1,14 @@
 // header scrolling effect
 $(window).on('scroll', function(){
     // Set a specific scroll position to trigger the header class
-    const scrollPositionThreshold = 100;
+  const scrollPositionThreshold = 100;
 
-    if ($(window).scrollTop() < scrollPositionThreshold) {
-        $('header').addClass('nav-show');
-    } else {
-        $('header').removeClass('nav-show');
-    }
+  if ($(window).scrollTop() < scrollPositionThreshold) {
+      $('header').addClass('nav-show');
+  } else {
+      $('header').removeClass('nav-show');
+  }
 });
-
 
 const fixedOverlayHeight = 47; // Set your desired fixed height
 
@@ -17,6 +16,7 @@ $(window).on('scroll', function () {
     // Always set a fixed height for the overlay
     $('.overlay').css('height', fixedOverlayHeight + 'vh');
 });
+
 
 // hamburger
 const navSlide = () => {
@@ -62,18 +62,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
             } else {
                 nameAnimationCompleted = true;
-                charIndexPosition = 0;
+                introPosition.textContent = "I'm ";
                 typeText(); // Continue with position typing
             }
         } else {
-            if (charIndexPosition <= positions[positionIndex].length) {
-                introPosition.textContent = positions[positionIndex].slice(0, charIndexPosition++);
+            if (charIndexPosition < positions[positionIndex].length) {
+                introPosition.textContent += positions[positionIndex][charIndexPosition++];
                 setTimeout(typeText, 100);
             } else {
                 setTimeout(() => {
                     charIndexName = 0;
                     charIndexPosition = 0;
                     positionIndex = (positionIndex + 1) % positions.length;
+                    introPosition.textContent = "I'm "; // Reset introPosition content
                     typeText();
                 }, 1000); // Wait for 1 second before switching to the next position
             }
