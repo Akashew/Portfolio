@@ -1,14 +1,14 @@
 // header scrolling effect
 $(window).on('scroll', function(){
-    // Set a specific scroll position to trigger the header class
-  const scrollPositionThreshold = 100;
-
-  if ($(window).scrollTop() < scrollPositionThreshold) {
+	if($(window).scrollTop()){
       $('header').addClass('nav-show');
-  } else {
-      $('header').removeClass('nav-show');
-  }
-});
+		  
+	} 
+	else{
+		$('header').removeClass('nav-show');
+	}
+	   
+})
 
 const fixedOverlayHeight = 47; // Set your desired fixed height
 
