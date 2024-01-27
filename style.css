@@ -386,6 +386,15 @@ a.nav-link{
   color: var(--main-fonts-color); /* Change this to your desired color */
   font-size: 50px; /* Change this to your desired font size */
 }
+
+
+@media only screen and (max-width: 500px) {
+  #contact h3 {
+    padding: 25px; /* Adjust the padding to your preference */
+  }
+}
+
+
 /*────────────────── 
        footer
 ──────────────────*/
