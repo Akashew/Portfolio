@@ -1,13 +1,13 @@
 // header scrolling effect
 $(window).on('scroll', function(){
-	if($(window).scrollTop()){
+  if($(window).scrollTop()){
       $('header').addClass('nav-show');
-		  
-	} 
-	else{
-		$('header').removeClass('nav-show');
-	}
-	   
+
+  } 
+  else{
+    $('header').removeClass('nav-show');
+  }
+
 })
 
 const fixedOverlayHeight = 47; // Set your desired fixed height
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
             } else {
                 nameAnimationCompleted = true;
-                introPosition.textContent = "I'm ";
+                introPosition.textContent = "I'm a ";
                 typeText(); // Continue with position typing
             }
         } else {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     charIndexName = 0;
                     charIndexPosition = 0;
                     positionIndex = (positionIndex + 1) % positions.length;
-                    introPosition.textContent = "I'm "; // Reset introPosition content
+                    introPosition.textContent = "I'm a "; // Reset introPosition content
                     typeText();
                 }, 1000); // Wait for 1 second before switching to the next position
             }

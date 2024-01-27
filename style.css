@@ -99,9 +99,12 @@ a.nav-link{
 }
 
 .nav-link:hover {
-	color: #000000;
-  background: var(--main-decor-color);
+	color: var(--main-decor-color);
+  
 }
+
+
+
 
 /*──────────────────
        home
@@ -220,7 +223,7 @@ a.nav-link{
 }
 
 #about-me p{
-  max-width: 800px;
+  max-width: 1000px;
   padding:10px;
   text-align:center;
   font-size:1.4rem;
@@ -318,6 +321,28 @@ a.nav-link{
 
 .card .language-logo {
     margin: 5px; /* Adjust spacing between logos */
+    position: relative; /* Make sure the position is relative */
+}
+
+.card .language-logo::after {
+    content: attr(data-tooltip); /* Use the content of the data-tooltip attribute */
+    position: absolute;
+    bottom: -25px; /* Adjust the position of the tooltip */
+    left: 50%; /* Align the tooltip to the center */
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8); /* Background color of the tooltip */
+    color: white; /* Text color of the tooltip */
+    font-size: 12px; /* Adjust the font size */
+    border-radius: 5px; /* Add rounded corners */
+    visibility: hidden; /* Hide the tooltip by default */
+    opacity: 0; /* Make the tooltip transparent */
+    transition: opacity 0.3s; /* Add a transition effect for opacity */
+}
+
+.card .language-logo:hover::after {
+    visibility: visible; /* Make the tooltip visible when hovering */
+    opacity: 1; /* Make the tooltip fully opaque */
 }
 
 .card .language-logo img {
@@ -358,7 +383,7 @@ a.nav-link{
 }
 
 #contact a i.far.fa-envelope {
-  color: #007bff; /* Change this to your desired color */
+  color: var(--main-fonts-color); /* Change this to your desired color */
   font-size: 50px; /* Change this to your desired font size */
 }
 /*────────────────── 
