@@ -233,7 +233,7 @@ a.nav-link{
 
 #about-me h3{
   padding-top: 0px;
-  font-size: 55px;
+  font-size: 60px;
   text-decoration: underline;
 }
 
@@ -255,7 +255,7 @@ a.nav-link{
 }
 #projects h3{
   padding-top: 70px;
-  font-size: 55px;
+  font-size: 60px;
   text-decoration: underline;
 }
 #projects p{
@@ -274,14 +274,14 @@ a.nav-link{
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    width: 330px;
-    height: 390px;
-    border-radius: 12px;
-    background: var(--main-decor-color);
-    transition: box-shadow 0.3s ease; /* Add transition for smooth animation */
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 330px;
+  height: 390px;
+  border-radius: 12px;
+  background: var(--main-decor-color);
+  transition: box-shadow 0.3s ease; /* Add transition for smooth animation */
 }
 
 .card img{
@@ -291,14 +291,12 @@ a.nav-link{
 }
 
 .card .work-content{
-
 	text-align: center;
 	padding: 10px 5px;
 	font-size: 1.8rem;
 	color: var(--main-fonts-color);
 	font-family: var(--main-font-family);
 	cursor: pointer;
-  
 }
 
 .card a{
@@ -315,39 +313,91 @@ a.nav-link{
 }
 
 .card .project-details {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .card .language-logo {
-    margin: 5px; /* Adjust spacing between logos */
-    position: relative; /* Make sure the position is relative */
+  margin: 5px; /* Adjust spacing between logos */
+  position: relative; /* Make sure the position is relative */
 }
 
 .card .language-logo::after {
-    content: attr(data-tooltip); /* Use the content of the data-tooltip attribute */
-    position: absolute;
-    bottom: -25px; /* Adjust the position of the tooltip */
-    left: 50%; /* Align the tooltip to the center */
-    transform: translateX(-50%); /* Center the tooltip horizontally */
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.8); /* Background color of the tooltip */
-    color: white; /* Text color of the tooltip */
-    font-size: 12px; /* Adjust the font size */
-    border-radius: 5px; /* Add rounded corners */
-    visibility: hidden; /* Hide the tooltip by default */
-    opacity: 0; /* Make the tooltip transparent */
-    transition: opacity 0.3s; /* Add a transition effect for opacity */
+  content: attr(data-tooltip); /* Use the content of the data-tooltip attribute */
+  position: absolute;
+  bottom: -25px; /* Adjust the position of the tooltip */
+  left: 50%; /* Align the tooltip to the center */
+  transform: translateX(-50%); /* Center the tooltip horizontally */
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8); /* Background color of the tooltip */
+  color: white; /* Text color of the tooltip */
+  font-size: 12px; /* Adjust the font size */
+  border-radius: 5px; /* Add rounded corners */
+  visibility: hidden; /* Hide the tooltip by default */
+  opacity: 0; /* Make the tooltip transparent */
+  transition: opacity 0.3s; /* Add a transition effect for opacity */
 }
 
 .card .language-logo:hover::after {
-    visibility: visible; /* Make the tooltip visible when hovering */
-    opacity: 1; /* Make the tooltip fully opaque */
+  visibility: visible; /* Make the tooltip visible when hovering */
+  opacity: 1; /* Make the tooltip fully opaque */
 }
 
 .card .language-logo img {
-    width: 30px; /* Adjust the size of the logos */
-    height: 30px;
+  width: 30px; /* Adjust the size of the logos */
+  height: 30px;
+}
+
+
+/* Experiences Section Styling */
+#experience {
+  text-align: center;
+  padding: 250px 20px 20px; /* Add padding to the top */
+}
+
+#experience h3 {
+  font-size: 60px; /* Adjust heading size */
+  margin-bottom: 20px; /* Add space below the section title */
+  text-decoration: underline;
+}
+
+.experience-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-decor-color);
+  max-width: 500px; /* Adjust max-width for better responsiveness */
+  margin: 0 auto;
+}
+
+.experience-content h4 {
+  font-size: 21px;
+  color: var(--main-fonts-color);
+  margin-bottom: 8px;
+}
+
+.experience-content h2 {
+  font-size: 25px; /* Adjust size of job title */
+  margin-bottom: 10px;
+  color: var(--main-fonts-color)
+}
+
+.experience-content p {
+  font-size: 21px;
+  color: var(--main-fonts-color);
+  line-height: 1.6;
+  text-align: left;
 }
 
 
@@ -378,7 +428,7 @@ a.nav-link{
 }
 
 #contact h3{
-  font-size: 55px;
+  font-size: 60px;
   text-decoration: underline;
 }
 
@@ -386,6 +436,12 @@ a.nav-link{
   color: var(--main-fonts-color); /* Change this to your desired color */
   font-size: 50px; /* Change this to your desired font size */
 }
+
+
+
+
+
+
 
 
 /*────────────────── 
@@ -523,7 +579,7 @@ hr {
 
 @media only screen and (max-width: 500px) {
 
-	#home, #about-me, #projects, #contact{
+	#home, #about-me, #projects, #experience, #contact{
       overflow-x: hidden;
 	}
 	header{
