@@ -85,6 +85,45 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS with your user ID
+    emailjs.init('L41wGJZrTBO6SHlRH');
+
+    // Add event listener to the contact form
+    document.querySelector('.contact-form').addEventListener('submit', function(event) {
+
+        event.preventDefault(); // Prevent form submission
+
+        // Get form values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Send email using EmailJS
+        emailjs.send('service_bk1wk7b', 'template_wkxksj6', {
+            from_name: name,
+            from_email: email,
+            message: message
+        }).then(function(response) {
+            // Display success message to the user
+            alert('Your message has been sent successfully!');
+            console.log('SUCCESS!', response.status, response.text);
+
+            // Clear form fields
+            document.querySelector('.contact-form form').reset();
+
+
+        }, function(error) {
+            // Display error message to the user
+            alert('Oops... An error occurred, please try again later.');
+            console.log('FAILED...', error);
+        });
+    });
+});
+
+
+
+
 
 
 window.onload = () => navSlide();
