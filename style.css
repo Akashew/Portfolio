@@ -225,8 +225,8 @@ a.nav-link{
 #about-me p{
   max-width: 1000px;
   padding:10px;
-  text-align:left;
-  font-size:1.8rem;
+  text-align:center;
+  font-size:1.5rem;
   font-family: var(--main-font-family);
 
 }
