@@ -35,7 +35,7 @@ main{
   left: 0;
   width: 100%;
   height: 65px;
-  background-color: #CFB97F; /* Set your desired background color */
+  background-color: #CFB97F; 
   z-index: -1;
 }
 
@@ -55,10 +55,10 @@ header{
 }
 
 
-/* Apply header box styles for screen widths greater than 500px */
+
 @media only screen and (max-width: 500px) {
   .header-box {
-    display: none; /* Display the header box for screens > 500px */
+    display: none; 
   }
 }
 
@@ -156,11 +156,11 @@ a.nav-link{
 	font-size: 100px;
 	color: var(--main-fonts-color);
 
-   /* Add animation properties */
-  opacity: 0; /* Initially set opacity to 0 */
-  animation: fadeIn 1s ease-in-out forwards; /* Use fadeIn animation */
+   
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; 
 
-   /* You can customize the animation keyframes as needed */
+   
   
    
 }
@@ -281,7 +281,7 @@ a.nav-link{
   height: 390px;
   border-radius: 12px;
   background: var(--main-decor-color);
-  transition: box-shadow 0.3s ease; /* Add transition for smooth animation */
+  transition: box-shadow 0.3s ease; 
 }
 
 .card img{
@@ -309,7 +309,7 @@ a.nav-link{
 }
 
 .card:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Apply a subtle shadow on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
 }
 
 .card .project-details {
@@ -318,33 +318,33 @@ a.nav-link{
 }
 
 .card .language-logo {
-  margin: 5px; /* Adjust spacing between logos */
-  position: relative; /* Make sure the position is relative */
+  margin: 5px; 
+  position: relative; 
 }
 
 .card .language-logo::after {
-  content: attr(data-tooltip); /* Use the content of the data-tooltip attribute */
+  content: attr(data-tooltip); 
   position: absolute;
-  bottom: -25px; /* Adjust the position of the tooltip */
-  left: 50%; /* Align the tooltip to the center */
-  transform: translateX(-50%); /* Center the tooltip horizontally */
+  bottom: -25px; 
+  left: 50%; 
+  transform: translateX(-50%); 
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.8); /* Background color of the tooltip */
-  color: white; /* Text color of the tooltip */
-  font-size: 12px; /* Adjust the font size */
-  border-radius: 5px; /* Add rounded corners */
-  visibility: hidden; /* Hide the tooltip by default */
-  opacity: 0; /* Make the tooltip transparent */
-  transition: opacity 0.3s; /* Add a transition effect for opacity */
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: white; 
+  font-size: 12px; 
+  border-radius: 5px; 
+  visibility: hidden; 
+  opacity: 0; 
+  transition: opacity 0.3s; 
 }
 
 .card .language-logo:hover::after {
-  visibility: visible; /* Make the tooltip visible when hovering */
-  opacity: 1; /* Make the tooltip fully opaque */
+  visibility: visible; 
+  opacity: 1; 
 }
 
 .card .language-logo img {
-  width: 30px; /* Adjust the size of the logos */
+  width: 30px; 
   height: 30px;
 }
 
@@ -352,12 +352,12 @@ a.nav-link{
 /* Experiences Section Styling */
 #experience {
   text-align: center;
-  padding: 250px 20px 20px; /* Add padding to the top */
+  padding: 250px 20px 20px; 
 }
 
 #experience h3 {
-  font-size: 60px; /* Adjust heading size */
-  margin-bottom: 20px; /* Add space below the section title */
+  font-size: 60px; 
+  margin-bottom: 20px; 
   text-decoration: underline;
 }
 
@@ -377,7 +377,7 @@ a.nav-link{
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: var(--main-decor-color);
-  max-width: 500px; /* Adjust max-width for better responsiveness */
+  max-width: 500px; 
   margin: 0 auto;
 }
 
@@ -388,7 +388,7 @@ a.nav-link{
 }
 
 .experience-content h2 {
-  font-size: 25px; /* Adjust size of job title */
+  font-size: 25px; 
   margin-bottom: 10px;
   color: var(--main-fonts-color)
 }
@@ -433,32 +433,32 @@ a.nav-link{
     
     display: inline-block;
     margin-bottom: 5px;
-    width: 150px; /* Adjust the width for the labels */
+    width: 150px; 
     font-size: 25px;
-    color: var(--main-fonts-color); /* Change the color to your desired color */
-    font-family: var(--main-font-family); /* Change the font family to your desired font */
+    color: var(--main-fonts-color); 
+    font-family: var(--main-font-family); 
 }
 
 #name,
 #email {
-  width: 100%; /* Adjust the width for name and email inputs */
+  width: 100%; 
   
 }
 
 #message {
-    width: 100%; /* Adjust the width for the message textarea */
-    height: 200px; /* Increase the height of the message textarea */
+    width: 100%; 
+    height: 200px; 
 }
 
 .contact-input input[type="text"],
 .contact-input input[type="email"],
 .contact-input textarea {
-    width: calc(100% - 10px); /* Adjust the width for the input fields */
-    padding: 10px; /* Increase the padding to increase the area */
+    width: calc(100% - 10px); 
+    padding: 10px; 
     font-size: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    vertical-align: top; /* Align the input fields to the top */
+    vertical-align: top; 
    
 }
 
@@ -471,6 +471,7 @@ a.nav-link{
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    font-family: var(--main-font-family);
 }
 
 .button-container {
@@ -481,7 +482,12 @@ a.nav-link{
     background-color: #b89d63;
 }
 
-
+.confirmation-message {
+    margin-top: 10px; 
+    font-family: var(--main-font-family);
+    font-size: 16px;
+    color: var(--main-fonts-color); 
+}
 
 
 

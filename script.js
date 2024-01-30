@@ -10,10 +10,10 @@ $(window).on('scroll', function(){
 
 })
 
-const fixedOverlayHeight = 47; // Set your desired fixed height
+const fixedOverlayHeight = 47; 
 
 $(window).on('scroll', function () {
-    // Always set a fixed height for the overlay
+    
     $('.overlay').css('height', fixedOverlayHeight + 'vh');
 });
 
@@ -27,9 +27,9 @@ const navSlide = () => {
 
     hamburger.onclick = () => {
         navbar.classList.toggle("nav-active");
-        overlay.classList.toggle("overlay-active"); // Toggle overlay visibility
+        overlay.classList.toggle("overlay-active"); 
 
-        // Animation links
+        
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = "";
@@ -38,7 +38,7 @@ const navSlide = () => {
             }
         });
 
-        // Hamburger animation
+       
         hamburger.classList.toggle("toggle");
     };
 }
@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!nameAnimationCompleted) {
             introName.textContent = nameText.slice(0, charIndexName++);
             if (charIndexName <= nameText.length) {
-                setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
+                setTimeout(typeText, 100); 
             } else {
                 nameAnimationCompleted = true;
                 introPosition.textContent = "I'm a ";
-                typeText(); // Continue with position typing
+                typeText(); 
             }
         } else {
             if (charIndexPosition < positions[positionIndex].length) {
@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     charIndexName = 0;
                     charIndexPosition = 0;
                     positionIndex = (positionIndex + 1) % positions.length;
-                    introPosition.textContent = "I'm a "; // Reset introPosition content
+                    introPosition.textContent = "I'm a "; 
                     typeText();
-                }, 1000); // Wait for 1 second before switching to the next position
+                }, 1000); 
             }
         }
     }
@@ -86,40 +86,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS with your user ID
-    emailjs.init('L41wGJZrTBO6SHlRH');
+  
+  emailjs.init('L41wGJZrTBO6SHlRH');
 
-    // Add event listener to the contact form
-    document.querySelector('.contact-form').addEventListener('submit', function(event) {
+  
+  document.querySelector('.contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); 
 
-        event.preventDefault(); // Prevent form submission
+        
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
 
-        // Get form values
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
+      
+      emailjs.send('service_bk1wk7b', 'template_wkxksj6', {
+          from_name: name,
+          from_email: email,
+          message: message
+      }).then(function(response) {
+            
+          var confirmationMessage = document.getElementById('confirmation-message');
+          confirmationMessage.textContent = 'Your message has been sent successfully!';
+          console.log('SUCCESS!', response.status, response.text);
 
-        // Send email using EmailJS
-        emailjs.send('service_bk1wk7b', 'template_wkxksj6', {
-            from_name: name,
-            from_email: email,
-            message: message
-        }).then(function(response) {
-            // Display success message to the user
-            alert('Your message has been sent successfully!');
-            console.log('SUCCESS!', response.status, response.text);
+            
+          document.querySelector('.contact-form form').reset();
 
-            // Clear form fields
-            document.querySelector('.contact-form form').reset();
+           
+          setTimeout(function() {
+              confirmationMessage.textContent = '';
+          }, 3000);
 
-
-        }, function(error) {
-            // Display error message to the user
-            alert('Oops... An error occurred, please try again later.');
-            console.log('FAILED...', error);
-        });
-    });
+      }, function(error) {
+            
+          alert('Oops... An error occurred, please try again later.');
+          console.log('FAILED...', error);
+      });
+  });
 });
+
 
 
 
