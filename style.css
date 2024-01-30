@@ -223,10 +223,11 @@ a.nav-link{
 }
 
 #about-me p{
+  display: flex;
   max-width: 1000px;
   padding:10px;
   text-align:center;
-  font-size:1.5rem;
+  font-size:1.4rem;
   font-family: var(--main-font-family);
 
 }
@@ -237,7 +238,15 @@ a.nav-link{
   text-decoration: underline;
 }
 
+@media screen and (max-width: 500px) {
+  #about-me h3 {
+    font-size: 50px; /* Adjust as needed */
+  }
 
+  #about-me p {
+    font-size: 1.3rem; /* Adjust as needed */
+  }
+}
 
 /*──────────────────
       projects
