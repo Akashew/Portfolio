@@ -326,6 +326,14 @@ a.nav-link{
   justify-content: center;
 }
 
+.card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+
 .card .language-logo {
   margin: 5px; 
   position: relative; 
