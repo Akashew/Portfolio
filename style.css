@@ -1,14 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lobster&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@500&display=swap');
 
-:root{
-	--main-background: #F3E5AB;
-	--main-fonts-color: #594137;
-	--main-decor-color:#EFD99F;
-    
-	--main-font-family: 'Yeseva One', sans-serif;
+:root {
+  --main-background: #F3E5AB;
+  --main-fonts-color: #594137;
+  --main-decor-color: #EFD99F;
 
-  
+  --main-font-family: 'Khand', sans-serif; 
 }
+
+
+body {
+  font-family: var(--main-font-family);
+}
+
+.khand-medium {
+  font-family: var(--main-font-family); 
+  font-weight: 600;
+  font-style: normal;
+}
+
 
 *{
 	margin: 0;
@@ -289,6 +299,7 @@ a.nav-link{
   width: 330px;
   height: 390px;
   border-radius: 12px;
+  
   background: var(--main-decor-color);
   transition: box-shadow 0.3s ease; 
 }
