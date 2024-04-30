@@ -454,7 +454,6 @@ a.nav-link{
     max-width: 500px;
     margin: 0 auto;
     text-align: left;
-    
 }
 
 .contact-input {
@@ -462,7 +461,6 @@ a.nav-link{
 }
 
 .contact-input label {
-    
     display: inline-block;
     margin-bottom: 5px;
     width: 150px; 
@@ -473,8 +471,7 @@ a.nav-link{
 
 #name,
 #email {
-  width: 100%; 
-  
+    width: 100%; 
 }
 
 #message {
@@ -489,13 +486,23 @@ a.nav-link{
     padding: 10px; 
     font-size: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     vertical-align: top; 
-   
+}
+
+.contact-input input[type="text"]::placeholder,
+.contact-input input[type="email"]::placeholder,
+.contact-input textarea::placeholder {
+    color: #999; /* Light gray color */
+}
+
+.contact-input input[type="text"]:-ms-input-placeholder,
+.contact-input input[type="email"]:-ms-input-placeholder,
+.contact-input textarea:-ms-input-placeholder {
+    color: #999; /* For Internet Explorer */
 }
 
 .contact-button {
-    
     background-color: #c2af75;
     color: var(--main-fonts-color);
     padding: 12px 20px;
@@ -520,6 +527,7 @@ a.nav-link{
     font-size: 16px;
     color: var(--main-fonts-color); 
 }
+
 
 
 
