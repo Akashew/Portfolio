@@ -244,7 +244,7 @@ a.nav-link{
   display: flex;
   max-width: 1000px;
   padding:10px;
-  text-align:center;
+  text-align:left;
   font-size:1.4rem;
   font-family: var(--main-font-family);
 
@@ -464,11 +464,12 @@ a.nav-link{
 }
 
 .form-box {
-  background-color: #D8C590;
+  background-color: var(--main-background);
+  border: 3px solid #916B5A; /* Brown border */
   border-radius: 10px;
   padding: 25px;
-  padding-right: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding-right: 50px;
+  padding-bottom: 20px;
   margin-bottom: 20px;
 }
 
@@ -504,15 +505,16 @@ a.nav-link{
   border: 1px solid #ccc;
   border-radius: 10px;
   vertical-align: top; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: var(--main-background); 
   color: var(--main-fonts-color);
+  border: 3px solid #916B5A; /* Brown border */
 }
 
 .contact-input input[type="text"]::placeholder,
 .contact-input input[type="email"]::placeholder,
 .contact-input textarea::placeholder {
   color: #916B5A; /* Light gray color */
+  
 }
 
 
@@ -520,6 +522,9 @@ a.nav-link{
 .contact-input input[type="email"]:focus,
 .contact-input textarea:focus {
   color: var(--main-fonts-color); /* Text color on focus */
+  border-color: #916B5A; /* Brown border color */
+
+  outline: none; /* Remove the default focus outline */
 }
 
 .contact-button {
