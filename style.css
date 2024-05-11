@@ -123,7 +123,6 @@ a.nav-link{
 #home{ 	
 	margin: auto;
 	height: 100vh;
-	color: var(--main-fonts-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -145,7 +144,7 @@ a.nav-link{
 
 .intro {
 	text-align:center;
-  color: var(--main-fonts-color);
+  color: var(--main-decor-color);
 	z-index: 1;
 	margin: auto;
 	padding: 20px;
@@ -159,7 +158,25 @@ a.nav-link{
 	text-align:center;
 }
 
- h3{
+ .intro h3{
+	padding-bottom: 15px;
+  letter-spacing: normal;
+  font-family: var(--main-font-family);
+	font-style: normal;
+	font-size: 100px;
+	color: var(--main-decor-color);
+
+   
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; 
+
+   
+  
+   
+}
+
+
+h3{
 	padding-bottom: 15px;
   letter-spacing: normal;
   font-family: var(--main-font-family);
@@ -192,6 +209,11 @@ a.nav-link{
   }
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+
 
 
 /*──────────────────
@@ -212,7 +234,7 @@ a.nav-link{
   font-size: 2.5rem;
   text-align:center;
   display: inline-block;
-	color: var(--main-fonts-color);
+	color: var(--main-decor-color);
 }
 
 .social-media a i{
@@ -220,8 +242,9 @@ a.nav-link{
 }
 
 .social-media  a:hover {
-	color: var(--main-decor-color);
-	text-shadow: 0 0 50px var(--main-decor-color);
+	color: var(--main-fonts-color);
+	
+
 }
 
 /*──────────────────
@@ -237,7 +260,7 @@ a.nav-link{
   align-items: center;
   justify-content: center;
   color: var(--main-fonts-color);
-  margin-top: -120px; 
+  margin-top: -60px; 
 }
 
 #about-me p{
@@ -257,6 +280,12 @@ a.nav-link{
 }
 
 @media screen and (max-width: 500px) {
+
+  #about-me{
+    margin-top: -10px; 
+  }
+
+
   #about-me h3 {
     font-size: 50px; 
   }
@@ -382,6 +411,15 @@ a.nav-link{
 .card .language-logo img {
   width: 30px; 
   height: 30px;
+}
+
+
+@media screen and (max-width: 500px) {
+
+  #projects {
+    margin-top: -50px;
+  }
+  
 }
 
 
