@@ -279,7 +279,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: -120px;
+  margin-top: 10px;
 }
 
 #projects h3 {
@@ -394,7 +394,7 @@ body {
 #experience {
   text-align: center;
   padding: 250px 20px 20px;
-  margin-top: -140px;
+  margin-top: -300px;
 }
 
 #experience h3 {
@@ -450,7 +450,7 @@ body {
   margin: auto;
   padding: 250px 20px 20px;
   text-align: center;
-  margin-top: -120px;
+  margin-top: -180px;
 }
 
 #contact h3 {
