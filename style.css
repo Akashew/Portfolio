@@ -4,12 +4,43 @@
   --main-background: #f3e5ab;
   --main-fonts-color: #594137;
   --main-decor-color: #efd99f;
-
   --main-font-family: "Khand", sans-serif;
 }
 
+/* Enhanced CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
 body {
-  font-family: var(--main-font-family);
+  font-family: var(--main-font-family), Arial, sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
 }
 
 .khand-medium {
@@ -18,17 +49,18 @@ body {
   font-style: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
 main {
   padding: 0;
   width: 100%;
   height: 100%;
   background: var(--main-background);
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 /*────────────────── 
@@ -164,7 +196,6 @@ h3 {
   font-style: normal;
   font-size: 100px;
   color: var(--main-fonts-color);
-
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
@@ -186,11 +217,6 @@ h3 {
   .intro h3 {
     font-size: 65px;
   }
-}
-
-html,
-body {
-  overflow-x: hidden;
 }
 
 /*──────────────────
@@ -227,15 +253,14 @@ body {
 ──────────────────*/
 
 #about-me {
-  margin: auto;
-  padding-bottom: 20px;
-  height: 600px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--main-fonts-color);
-  margin-top: -60px;
 }
 
 #about-me p {
@@ -255,7 +280,7 @@ body {
 
 @media screen and (max-width: 500px) {
   #about-me {
-    margin-top: -10px;
+    padding: 40px 20px 20px;
   }
 
   #about-me h3 {
@@ -268,25 +293,81 @@ body {
 }
 
 /*──────────────────
+      Experience
+──────────────────*/
+
+#experience {
+  text-align: center;
+  padding: 100px 20px 40px;
+  margin: 0 auto;
+}
+
+#experience h3 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.experience-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-decor-color);
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+.experience-content h4 {
+  font-size: 21px;
+  color: var(--main-fonts-color);
+  margin-bottom: 8px;
+}
+
+.experience-content h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: var(--main-fonts-color);
+}
+
+.experience-content p {
+  font-size: 21px;
+  color: var(--main-fonts-color);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/*──────────────────
       projects
 ──────────────────*/
 
 #projects {
-  padding: 5px;
+  padding: 80px 5px 40px;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 10px;
+  margin: 0 auto;
 }
 
 #projects h3 {
-  padding-top: 70px;
+  padding-bottom: 20px;
   font-size: 60px;
   text-decoration: underline;
 }
+
 #projects p {
   font-family: var(--main-font-family);
   font-size: 1.8rem;
@@ -309,7 +390,6 @@ body {
   width: 330px;
   height: 390px;
   border-radius: 12px;
-
   background: var(--main-decor-color);
   transition: box-shadow 0.3s ease;
 }
@@ -386,60 +466,8 @@ body {
 
 @media screen and (max-width: 500px) {
   #projects {
-    margin-top: -50px;
+    padding: 40px 5px 20px;
   }
-}
-
-/* Experiences Section Styling */
-#experience {
-  text-align: center;
-  padding: 250px 20px 20px;
-  margin-top: -330px;
-}
-
-#experience h3 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  text-decoration: underline;
-}
-
-.experience-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.experience-item {
-  margin-bottom: 20px;
-}
-
-.experience-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: var(--main-decor-color);
-  max-width: 590px;
-  margin: 0 auto;
-}
-
-.experience-content h4 {
-  font-size: 21px;
-  color: var(--main-fonts-color);
-  margin-bottom: 8px;
-}
-
-.experience-content h2 {
-  font-size: 25px;
-  margin-bottom: 10px;
-  color: var(--main-fonts-color);
-}
-
-.experience-content p {
-  font-size: 21px;
-  color: var(--main-fonts-color);
-  line-height: 1.6;
-  text-align: left;
 }
 
 /*──────────────────
@@ -447,10 +475,9 @@ body {
 ──────────────────*/
 
 #contact {
-  margin: auto;
-  padding: 250px 20px 20px;
+  margin: 0 auto;
+  padding: 100px 20px 40px;
   text-align: center;
-  margin-top: -180px;
 }
 
 #contact h3 {
@@ -467,7 +494,7 @@ body {
 
 .form-box {
   background-color: var(--main-background);
-  border: 3px solid #916b5a; /* Brown border */
+  border: 3px solid #916b5a;
   border-radius: 10px;
   padding: 25px;
   padding-right: 50px;
@@ -509,22 +536,21 @@ body {
   vertical-align: top;
   background-color: var(--main-background);
   color: var(--main-fonts-color);
-  border: 3px solid #916b5a; /* Brown border */
+  border: 3px solid #916b5a;
 }
 
 .contact-input input[type="text"]::placeholder,
 .contact-input input[type="email"]::placeholder,
 .contact-input textarea::placeholder {
-  color: #916b5a; /* Light gray color */
+  color: #916b5a;
 }
 
 .contact-input input[type="text"]:focus,
 .contact-input input[type="email"]:focus,
 .contact-input textarea:focus {
-  color: var(--main-fonts-color); /* Text color on focus */
-  border-color: #916b5a; /* Brown border color */
-
-  outline: none; /* Remove the default focus outline */
+  color: var(--main-fonts-color);
+  border-color: #916b5a;
+  outline: none;
 }
 
 .contact-button {
